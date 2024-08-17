@@ -15,6 +15,7 @@ import Dashboard from './component/Dashboard.js'
 import AboutUs from "./component/About_us.js";
 import Event from "./component/event.js"
 import VerifyEmail from './component/verifymail.js'
+// import Emailverificationforpasswordforgot from './component/Resetpassword.js'
 
 
 function App() {
@@ -30,8 +31,11 @@ function App() {
         {/* <Route 
          path="/home" element={<Home/>}
         ></Route> */}
+        
           <Route  path="/Questiondemo" element={<Questiondemo/>}>
           </Route>
+          {/* <Route  path="/emailverificationforpasswordforgot" element={<Emailverificationforpasswordforgot.js/>}>
+          </Route> */}
           <Route  path="/Adminlogin" element={<Adminlogin/>}>
           </Route>
           <Route  path="/event" element={<Event/>}>
