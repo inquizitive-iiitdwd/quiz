@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif
+}
+#eventName {
+    margin-top:1rem;
+    text-align: center;
+    width: 100%;
+}
+form{
+     display: flex;
+      margin: 1rem auto 20px;
+     flex-direction:column;
+     max-width:600px;
+    
+}
+.form-input{
+    align-items: center;
+    margin-bottom:20px;
+    padding:0.23rem;
+    max-width: 400px;
+    border:1px solid black;
+}
+
+#btn{
+    background-color: #007bff;
+    max-width:100px;
+    align-items: center;
+    padding:0.5rem;
+    justify-content: center;
+    border:5px solid #007bff ;
+    border-radius: 10px;
+}
+
+.mailOutline:focus{
+    border:2px solid red;
+    outline:none;
+}
+
+#mail-msg{
+    color:red;
+    margin-top:2px;
+    padding:0;
+    margin-bottom:3px;
+    margin-left:360px;
+    margin-right:0px;
+    float: right;
+}

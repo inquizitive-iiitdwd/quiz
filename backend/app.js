@@ -29,7 +29,8 @@ app.use('/users', userRoutes);
 app.use('/events', eventRoutes);
 app.use('/notifications', notificationRoutes);
 app.use("/quiz",createquiz);
-app.use('/quizsetup',GoToQuizSetUp)
+app.use('/quizsetup',GoToQuizSetUp);
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
