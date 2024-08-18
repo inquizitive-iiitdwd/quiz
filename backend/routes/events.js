@@ -7,3 +7,6 @@ const router = express.Router();
 router.post('/eventRegistration',eventRegistration);
 
  export default router;
+
+
+ 

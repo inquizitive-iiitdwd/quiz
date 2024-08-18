@@ -17,6 +17,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 const upload = multer({ dest: "" });
 
 export const addquestion_to_quiz = async (req, res) => {
+
   const {
     questionId,
     question,
@@ -25,7 +26,7 @@ export const addquestion_to_quiz = async (req, res) => {
     description,
     imgSrc,
     quizName,
-  } = req.body;
+  } = req.body.data;
   console.log(question);
   try {
     // Check if the question already exists in the quiz
@@ -120,7 +121,8 @@ export const uploadmediaquestion =
     //console.log(quizName)
   try {
   const result = await db.query('SELECT * FROM quiz_question');
-   //console.log(result.rows);
+  console.log("jkifjhnrbv ")
+  console.log(result.rows);
   res.json(result.rows);
   //res.status(200).send('Data updated successfully');
   } catch (err) {

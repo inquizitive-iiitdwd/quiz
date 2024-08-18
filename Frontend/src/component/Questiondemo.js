@@ -42,7 +42,7 @@ const QuestionDemo = () => {
     } else {
       const data = { questionId, question, options, description, imgSrc, answer, quizName };
       try {
-        const response = await axios.post("http://localhost:5000/addquestion", { data });
+        const response = await axios.post("http://localhost:5000/quiz/addquestion_to_quiz", { data });
         if (response.status === 200) {
           setQuestions([...questions, data]);
           setQuestion('');

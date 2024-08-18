@@ -55,10 +55,15 @@ const Dashboard = () => {
   const QuizBank =async (hello) => {
     const data = { name: hello };
       try {
-        const response = await axios.post('http://localhost:5000/Questionbankname', { data });
-        if (response.status === 200) {
+        const response = await axios.post('http://localhost:5000/quizsetup/Questionbankname', { data });
+        console.log(response)
+        if (response.data.ok === true) {
           navigate('/Questiondemo');
         }
+        else{
+          navigate('./');
+        }
+        
       } catch (error) {
         toast.error('Error saving quiz');
       }
@@ -79,7 +84,7 @@ const Dashboard = () => {
       setQuizName('');
       const data = { name: quizName };
       try {
-        const response = await axios.post('http://localhost:5000/addquizname', { data });
+        const response = await axios.post('http://localhost:5000/quizsetup/addquizname', { data });
         if (response.status === 200) {
         }
       } catch (error) {
@@ -106,11 +111,12 @@ const Dashboard = () => {
     setQuizTime(quizzes[index].time || '');
   };
 
-  const handleSave_Timer = async () => {
+  const handleSave_Timer = async () => { 
     const data = { saveTimerquizname, quizDate, quizTime };
     console.log(data);
     try{
-    const response = await axios.post('http://localhost:5000/addSaveTimer', data);
+      const response = await axios.post('http://localhost:5000/quizsetup/addSaveTimer', data);
+      console.log(response)
     const updatedQuizzes = quizzes.map((quiz, index) =>
       index === editingQuizIndex ? { ...quiz, date: quizDate, time: quizTime } : quiz
     );

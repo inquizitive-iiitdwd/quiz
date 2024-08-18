@@ -1,3 +1,18 @@
+import db from "../config.js"
+import express from 'express';
+
+import fs from "fs";
+let quizName = null;
+const quizNameFilePath = "./quizname.txt";
+
+if (fs.existsSync(quizNameFilePath)) {
+  quizName = fs.readFileSync(quizNameFilePath,"utf8");
+}
+
+const saveQuizNameToFile = (name) => {
+  fs.writeFileSync(quizNameFilePath, name, "utf8");
+}
+
 export const questionForonequiz=async(req,res)=>{
     try {
       console.log(quizName)
@@ -13,7 +28,7 @@ export const questionForonequiz=async(req,res)=>{
   export const addquizname =async(req,res)=>{
   console.log("addquizname",req.body.data.name);
  const  quizName = req.body.data.name;
-  saveQuizNameToFile(quizName);
+  saveQuizNameToFile(quizName); //.txt file
   try{
     await db.query("INSERT INTO quiz_setup(name) VALUES ($1)", [req.body.data.name]);
     res.status(200).send('Data updated successfully');
@@ -22,10 +37,17 @@ export const questionForonequiz=async(req,res)=>{
   }
   }
   export const Questionbankname= async(req,res)=>{
+    
+  
     console.log("addquizname",req.body.data.name);
     quizName = req.body.data.name;
+    if(quizName){
     saveQuizNameToFile(quizName);
-    res.status(200).send('Data updated successfully');
+    res.status(200).json({ok:true});}
+    else{
+      res.status(400).json({ok:false});
+    }
+
     }
   
   
@@ -36,9 +58,10 @@ export const GoToQuizSetUp=async(req,res)=>{
   }
   
   export const addSaveTimer=async(req,res)=>{
-    const receivedData=req.body
+    const receivedData=req.body;
+   
     console.log("addSaveTimer",receivedData)
-    await db.query("UPDATE quiz_setup SET time=$1, date=$2 WHERE name=$3",[receivedData.quizTime,receivedData.quizDate,quizName])
+    await db.query("UPDATE quiz_setup SET time=$1, date=$2 WHERE name=$3",[receivedData.quizTime,receivedData.quizDate,receivedData.quizName])
     res.send(req.body)
     }
     

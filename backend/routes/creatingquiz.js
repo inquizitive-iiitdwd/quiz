@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post("/addquestion_to_quiz",addquestion_to_quiz);
 router.post("/uploadmediaquestion",uploadmediaquestion);
-router.get("/getquestion",authenticate_user,getquestion);
+router.get("/getquestion",getquestion);
 router.post("/deletequestion",deletequestion)//use router.delete
 
 export default router;

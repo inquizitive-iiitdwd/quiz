@@ -7,10 +7,11 @@ const Createquizquestion = ({ onQuestionsChange }) => {
   const { questions } = useGlobalcontext();
   const [myArray, setMyArray] = useState([]);
   const [questionList, setQuestionList] = useState(questions);
-
+console.log("question",questions)
   useEffect(() => {
     const result= async ()=>{
-     const getdata= await axios.get("http://localhost:5000/questionForonequiz")
+     const getdata= await axios.get("http://localhost:5000//quizsetup/questionForonequiz");
+     console.log("**************");
      console.log('d',getdata.data)
      setQuestionList(getdata.data);
     }

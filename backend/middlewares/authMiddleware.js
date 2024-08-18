@@ -2,8 +2,8 @@ import jwt, { decode } from 'jsonwebtoken';
 
 export const authenticate = (req, res, next) => {
   const token = req.headers['authorization'];
-  var a=token.slice(7);//when we request throw browser then directyly use token not a
-  if (!a) {
+  // var a=token.slice(7);//when we request throw browser then directyly use token not a
+  if (!token) {
     return res.status(401).json({ error: 'Access denied. No token provided.' });
   }
 
@@ -20,17 +20,20 @@ export const authenticate = (req, res, next) => {
 
 export const authenticate_user = (req, res, next) => {
   const token = req.headers['authorization'];
-  var a=token.slice(7);//when we request throw browser then directyly use token not a
+  // var a=token.slice(7);//when we request throw browser then directyly use token not a
   console.log('a');
-  if (!a) {
+  if (!token) {
     return res.status(401).json({ error: 'Access denied. No token provided.' });
   }
 
   try {
     const decoded = jwt.verify(a, process.env.JWT_SECRET);
     req.user = decoded;
+
     next();
   } catch (error) {
     res.status(400).json({ error: 'Invalid token.' });
+
+
   }
 };

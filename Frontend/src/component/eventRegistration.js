@@ -97,7 +97,7 @@ const EventRegistration = ()=>{
               MemberI:MemberI  ,
               MemberIid:members[mem1idx] ,
               MemberII : MemberII ,
-              MemberIIid : members[mem2idx]
+              MemberIIid : members[mem2idx],
             }
             console.log(data)
             const response = await axios.post("http://localhost:5000/events/eventRegistration", { data }, { withCredentials: true });

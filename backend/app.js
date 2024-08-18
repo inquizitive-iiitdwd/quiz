@@ -7,7 +7,7 @@ import notificationRoutes from './routes/notifications.js';
 import admine from './routes/admine.js'
 import userRoutes from './routes/user.js';
 import createquiz from './routes/creatingquiz.js';
-import { GoToQuizSetUp } from './controllers/quizsetupController.js';
+import GoToQuizSetUp from './routes/quizsetup.js';
 
 // Load environment variables from .env file
 dotenv.config();
