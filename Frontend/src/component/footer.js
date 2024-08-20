@@ -4,14 +4,14 @@ import logo from '../image/Club_logo.JPG.png'; // Assuming you have the logo ima
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-gray-800 to-black text-white py-12 px-8">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="w-full bg-gradient-to-red from-gray-800 to-black text-white">
+      <div className="container h">
         {/* Logo Section */}
         <div className="flex flex-col items-center md:items-start">
-          <img src={logo} alt="InQuizitive Logo" className="rounded-full border border-gray-300 w-24 h-24 mb-4" />
+          <img src={logo} alt="InQuizitive Logo" className="h-40 rounded-full border border-gray-300 mb-4" />
           <p className="text-lg font-bold">InQuizitive IIIT Dharwad</p>
         </div>
-
+    
         {/* Page Navigation */}
         <div className="flex flex-col items-center md:items-start space-y-3">
           <a href="#" className="text-lg hover:text-gray-400 transition-colors">
@@ -31,10 +31,10 @@ const Footer = () => {
             <FaFacebookF className="text-2xl" />
             <span>Facebook</span>
           </a>
-          <a href="#" className="flex items-center space-x-2 hover:text-gray-400 transition-colors">
+          {/* <a href="#" className="flex items-center space-x-2 hover:text-gray-400 transition-colors">
             <FaTwitter className="text-2xl" />
             <span>Twitter</span>
-          </a>
+          </a> */}
           <a href="#" className="flex items-center space-x-2 hover:text-gray-400 transition-colors">
             <FaInstagram className="text-2xl" />
             <span>Instagram</span>

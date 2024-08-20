@@ -33,7 +33,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-teal-700 to-teal-500 p-6 flex justify-between items-center">
+    <nav className="bg-gradient-to-r from-[#2e1a47] to-[#624a82] container mx-auto p-6 flex justify-between items-center p-6 flex justify-between items-center">
       <div className="flex items-center space-x-4 text-white">
         <div className="relative w-16 h-16 rounded-full overflow-hidden">
           <img src={logo} alt="InQuizitive Logo" className="w-full h-full object-cover" />
