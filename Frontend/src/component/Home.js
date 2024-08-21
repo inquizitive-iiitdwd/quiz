@@ -5,6 +5,7 @@ import axios from "axios";
 import NavBar from "./Nav.js";
 import clubimg from "../image/st.png";
 import Footer from "./footer.js";
+import brain from '../image/brain.png';
 
 const images = [
   "https://tse2.mm.bing.net/th?id=OIP.5GJy56Q2QqCRHp-zjC-2NAHaFj&pid=Api&P=0&h=180",
@@ -39,15 +40,15 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-[#2e1a47] to-[#624a82] container mx-auto p-6 flex justify-between items-center text-white min-h-screen flex flex-col">
+    <div className="bg-gradient-to-r from-[#2e1a47] to-[#624a82] container mx-auto flex justify-between items-center text-white min-h-screen flex flex-col">
       <NavBar />
       <div className="container mx-auto flex flex-col lg:flex-row items-center text-center lg:text-left py-10 px-4 lg:px-6">
-        <div className="w-full ml-20 flex flex-col items-center">
+        <div className="w-full  flex flex-col items-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white-400 animate-fadeIn">
           <p>Welcome to</p> 
           </h1>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white-400 animate-fadeIn">
-          <p>Inquizitive Club</p>
+          <p>InQuizitive Club</p>
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-8 animate-fadeIn">
             Where Curiosity Meets Challenge!
@@ -81,19 +82,19 @@ const Home = () => {
       </div>
 
       {/* Question of the Week Section */}
-      <section className="py-12 bg-gray-700 mx-10 my-8 rounded-lg shadow-lg animate-slideIn">
+      <section className="w-full bg-gradient-to-r from-[#2e1a47] to-[#624a82] py-12 my-8 px-5 rounded-lg shadow-xl animate-slideIn">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">Question of the Week</h2>
-          <p className="text-xl">What is the capital of Australia?</p>
+          <h2 className="text-4xl text-white font-bold mb-4">Question of the Week</h2>
+          <p className="text-xl text-white">What is the capital of Australia?</p>
         </div>
       </section>
 
       {/* Upcoming Events Section */}
       <section
-        className="relative py-12 mx-10 my-8 "
+        className="relative py-12 px-10 mx-5 my-4 shadow-xl rounded-lg overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://tse1.mm.bing.net/th?id=OIP.S2KMMdeWejny18e8ZujPIgHaGK&pid=Api&P=0&h=180')",
+            "url('https://images.unsplash.com/photo-1551478241-1c1c610d59aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFpbnQlMjBiYWNrZ3JvdW5kJTIwcHVycGxlfGVufDB8fDB8fHww')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundBlendMode: "overlay",
@@ -103,8 +104,7 @@ const Home = () => {
         <div className="relative container mx-auto text-center text-white">
           <h2 className="text-4xl font-bold mb-4">Upcoming Events</h2>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Join our upcoming events to engage with like-minded individuals and
-            expand your knowledge.
+          Join our events to connect with others and expand your knowledge.
           </p>
           <button
             className="bg-white text-black px-6 py-3 rounded-lg flex items-center justify-center mx-auto hover:bg-gray-300"
