@@ -5,7 +5,6 @@ import axios from "axios";
 import NavBar from "./Nav.js";
 import clubimg from "../image/st.png";
 import Footer from "./footer.js";
-import brain from '../image/brain.png';
 
 const images = [
   "https://tse2.mm.bing.net/th?id=OIP.5GJy56Q2QqCRHp-zjC-2NAHaFj&pid=Api&P=0&h=180",
@@ -13,7 +12,19 @@ const images = [
   "https://tse2.mm.bing.net/th?id=OIP.p7zv9rbBiVUaj_BQQX8C6gHaFx&pid=Api&P=0&h=180",
   "https://tse2.mm.bing.net/th?id=OIP.5GJy56Q2QqCRHp-zjC-2NAHaFj&pid=Api&P=0&h=180",
   "https://tse3.mm.bing.net/th?id=OIP.CJeJjqEKLIsbfEc8qxa9YQHaHa&pid=Api&P=0&h=180",
+  "https://tse3.mm.bing.net/th?id=OIP.CJeJjqEKLIsbfEc8qxa9YQHaHa&pid=Api&P=0&h=180",
+  "https://tse2.mm.bing.net/th?id=OIP.5GJy56Q2QqCRHp-zjC-2NAHaFj&pid=Api&P=0&h=180",
+  "https://tse1.mm.bing.net/th?id=OIP.S2KMMdeWejny18e8ZujPIgHaGK&pid=Api&P=0&h=180",
+  "https://tse2.mm.bing.net/th?id=OIP.p7zv9rbBiVUaj_BQQX8C6gHaFx&pid=Api&P=0&h=180",
+  "https://tse2.mm.bing.net/th?id=OIP.5GJy56Q2QqCRHp-zjC-2NAHaFj&pid=Api&P=0&h=180",
+  "https://tse3.mm.bing.net/th?id=OIP.CJeJjqEKLIsbfEc8qxa9YQHaHa&pid=Api&P=0&h=180",
+  "https://tse3.mm.bing.net/th?id=OIP.CJeJjqEKLIsbfEc8qxa9YQHaHa&pid=Api&P=0&h=180",
 ];
+
+
+
+
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -50,7 +61,7 @@ const Home = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white-400 animate-fadeIn">
           <p>InQuizitive Club</p>
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 animate-fadeIn">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 animate-fadeIn text-">
             Where Curiosity Meets Challenge!
           </p>
           <div className="space-x-4">
@@ -82,13 +93,12 @@ const Home = () => {
       </div>
 
       {/* Question of the Week Section */}
-      <section className="w-full bg-gradient-to-r from-[#2e1a47] to-[#624a82] py-12 my-8 px-5 rounded-lg shadow-xl animate-slideIn">
+      <section className="bg-gradient-to-r from-[#2e1a47] to-[#624a82] py-12 my-8 min-w-[75%] px-5 rounded-lg shadow-xl animate-slideIn my-12">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl text-white font-bold mb-4">Question of the Week</h2>
           <p className="text-xl text-white">What is the capital of Australia?</p>
         </div>
       </section>
-
       {/* Upcoming Events Section */}
       <section
         className="relative py-12 px-10 mx-5 my-4 shadow-xl rounded-lg overflow-hidden"
@@ -117,13 +127,13 @@ const Home = () => {
       </section>
 
       {/* Image Gallery */}
-      <div className="flex justify-center mt-12 space-x-4 overflow-x-auto px-2 mb-12">
+      <div className=" max-w-[80%] flex justify-center mt-12 space-x-4 overflow-x-auto px-2 mb-12">
         {images.map((src, index) => (
           <img
             key={index}
             src={src}
             alt={`Gallery image ${index + 1}`}
-            className="w-60 h-65 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+            className="w-60  h-65 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
           />
         ))}
       </div>

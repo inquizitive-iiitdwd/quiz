@@ -45,6 +45,7 @@ const NavBar = () => {
       </div>
       <div className="space-x-6">
         <ul className="flex space-x-10">
+          <li><button onClick={() => handleNavigation('/')} className="text-gray-200 hover:text-white">Home</button></li>
           <li><button onClick={() => handleNavigation('/Timer')} className="text-gray-200 hover:text-white">Quiz Room</button></li>
           <li><button onClick={() => handleNavigation('/Adminlogin')} className="text-gray-200 hover:text-white">Admin</button></li>
           <li><button onClick={() => handleNavigation('/event')} className="text-gray-200 hover:text-white">Event</button></li>

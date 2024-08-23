@@ -5,7 +5,35 @@ const ProfilePage = () => {
   return (
     <div>
       <NavBar />
-      
+      <div class="bg-purple-800 bg-gradient-to-r from-purple-900 to-pink-500">
+    <div class="grid w-11/12 max-w-[1600px] gap-8 grid-cols-5 auto-rows-min mx-auto my-8">
+      <div class="relative col-span-2 row-span-2 bg-cover rounded-3xl shadow-sm opacity-0 transform -translate-x-full transition-transform duration-700 ease-in-out" style="background-image: url('/DSC_0670.JPG'); animation-delay: 0.2s;">
+        <div class="h-full w-full text-transparent bg-transparent flex justify-center items-end relative z-30">
+          <p class="relative bottom-24 text-6xl font-sans">TCS Runner Up</p>
+        </div>
+      </div>
+      <div class="relative col-span-3 row-span-2 bg-cover rounded-3xl shadow-sm opacity-0 transform translate-x-full transition-transform duration-700 ease-in-out h-[688px]" style="background-image: url('/IMG_7907.JPG'); animation-delay: 0.4s;">
+        <div class="h-full w-full text-transparent bg-transparent flex justify-center items-end relative z-30">
+          <p class="relative bottom-24 text-6xl font-sans">TCS</p>
+        </div>
+      </div>
+      <div class="relative col-span-4 row-span-2 bg-cover bg-bottom rounded-3xl shadow-sm opacity-0 transform -translate-x-full transition-transform duration-700 ease-in-out" style="background-image: url('/IMG_1992.jpg'); animation-delay: 0.6s;">
+        <div class="h-full w-full text-transparent bg-transparent flex justify-center items-end relative z-30">
+          <p class="relative bottom-24 text-6xl font-sans">TCS Runner Up</p>
+        </div>
+      </div>
+      <div class="relative col-span-1 row-span-2 bg-cover bg-center rounded-3xl shadow-sm opacity-0 transform translate-x-full transition-transform duration-700 ease-in-out" style="background-image: url('/IMG_7839.JPG'); animation-delay: 0.8s;">
+        <div class="h-full w-full text-transparent bg-transparent flex justify-center items-end relative z-30">
+          <p class="relative bottom-24 text-6xl font-sans">TCS Runner Up</p>
+        </div>
+      </div>
+      <div class="relative col-span-5 row-span-2 bg-cover bg-bottom rounded-3xl shadow-sm opacity-0 transform -translate-x-full transition-transform duration-700 ease-in-out" style="background-image: url('/DSC_0615.JPG'); animation-delay: 1.2s;">
+        <div class="h-full w-full text-transparent bg-transparent flex justify-center items-end relative z-30">
+          <p class="relative bottom-24 text-6xl font-sans">TCS Runner Up</p>
+        </div>
+      </div>
+    </div>
+  </div>
       <Footer />
     </div>
   );

@@ -37,30 +37,34 @@ console.log(questions)
               {file_type==='video' && <video width="750" height="500" controls > <source src={file_url} type="video/mp4"/></video>}
               {image && <img src={image}  className="w-full h-auto max-w-md  mb-4 border rounded shadow-md" />}
               {discription && <p>{discription}</p>}
+              <div className=''>
               {options1 && (
                 <>
                   <input type="radio" id={`options1_${id}`} name={`${id}`} onChange={() => handleOptionChange(id, options1, answer)} />
                   <label htmlFor={`options1_${id}`}>{options1}</label><br />
                 </>
-              )}
+              )}</div>
+              <div>
               {options2 && (
                 <>
                   <input type="radio" id={`options2_${id}`} name={`${id}`} onChange={() => handleOptionChange(id, options2, answer)} />
                   <label htmlFor={`options2_${id}`}>{options2}</label><br />
                 </>
-              )}
+              )}</div>
+              <div>
               {options3 && (
                 <>
                   <input type="radio" id={`options3_${id}`} name={`${id}`} onChange={() => handleOptionChange(id, options3, answer)} />
                   <label htmlFor={`options3_${id}`}>{options3}</label><br />
                 </>
-              )}
+              )}</div>
+              <div>
               {options4 && (
                 <>
                   <input type="radio" id={`options4_${id}`} name={`${id}`} onChange={() => handleOptionChange(id, options4, answer)} />
                   <label htmlFor={`options4_${id}`}>{options4}</label><br />
                 </>
-              )}
+              )}</div>
             </div>
           );
         })}
